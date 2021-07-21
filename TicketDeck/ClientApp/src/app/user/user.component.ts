@@ -7,7 +7,7 @@ import {User} from './User';
     selector: 'app-user',
     templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
- 
+  providers: [HttpClient]
 })
 /** User component*/
 export class UserComponent {
