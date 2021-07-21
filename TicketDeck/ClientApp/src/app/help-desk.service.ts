@@ -4,9 +4,12 @@ import { Tickets } from './tickets/Tickets';
 
 
 
+
+
 @Injectable({
   providedIn: 'root'
 })
+
 
 
 
@@ -18,15 +21,22 @@ export class HelpDeskService {
   controller: string = '';
   baseURL: string = `https://localhost:44314/api/${this.controller}`
 
+
   //getUser(): any {
   //  this.controller = 'Users'
   //  return this.http.get<User>(this.baseURL);
   //}
 
-  getTickets(): any {
-    this.controller = 'Tickets'
-    return this.http.get<Tickets>(this.baseURL);
+  ///getTickets(): any {
+    ///this.controller = 'Tickets'
+    //return this.http.get<Tickets>(this.baseURL);
   }
+
+
+  //getTickets(): any {
+  //  this.controller = 'Tickets'
+  //  return this.http.get<Ticket>(this.baseURL);
+  //}
 
   //getBookmarks(): any {
   //  this.controller = 'Bookmarks'

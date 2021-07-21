@@ -24,6 +24,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.3.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
@@ -36,6 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
+
     <None Remove="ClientApp\src\app\help-desk.service.ts" />
     <None Remove="ClientApp\src\app\tickets\Tickets.ts" />
   </ItemGroup>
@@ -43,6 +48,11 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\help-desk.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\tickets\Tickets.ts" />
+    <None Remove="ClientApp\src\app\user\User.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\user\User.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
