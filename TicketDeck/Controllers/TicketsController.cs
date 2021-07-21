@@ -2,25 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-<<<<<<< HEAD
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-=======
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
->>>>>>> 924ec86732d8dc63079458f8df2bda1429b8e148
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using TicketDeck.Models;
 
 namespace TicketDeck.Controllers
 {
-<<<<<<< HEAD
+
     public class TicketsController : Controller
-=======
     [Route("api/[controller]")]
     [ApiController]
     public class TicketsController : ControllerBase
->>>>>>> 924ec86732d8dc63079458f8df2bda1429b8e148
     {
         private readonly HelpDeskContext _context;
 
@@ -29,7 +23,6 @@ namespace TicketDeck.Controllers
             _context = context;
         }
 
-<<<<<<< HEAD
         // GET: Tickets
         public async Task<IActionResult> Index()
         {
@@ -46,7 +39,7 @@ namespace TicketDeck.Controllers
 
             var ticket = await _context.Tickets
                 .FirstOrDefaultAsync(m => m.TicketId == id);
-=======
+
         // GET: api/Tickets
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Ticket>>> GetTickets()
@@ -59,14 +52,10 @@ namespace TicketDeck.Controllers
         public async Task<ActionResult<Ticket>> GetTicket(int id)
         {
             var ticket = await _context.Tickets.FindAsync(id);
-
->>>>>>> 924ec86732d8dc63079458f8df2bda1429b8e148
             if (ticket == null)
             {
                 return NotFound();
             }
-
-<<<<<<< HEAD
             return View(ticket);
         }
 
@@ -153,7 +142,6 @@ namespace TicketDeck.Controllers
 
             var ticket = await _context.Tickets
                 .FirstOrDefaultAsync(m => m.TicketId == id);
-=======
             return ticket;
         }
 
@@ -206,13 +194,10 @@ namespace TicketDeck.Controllers
         public async Task<ActionResult<Ticket>> DeleteTicket(int id)
         {
             var ticket = await _context.Tickets.FindAsync(id);
->>>>>>> 924ec86732d8dc63079458f8df2bda1429b8e148
             if (ticket == null)
             {
                 return NotFound();
             }
-
-<<<<<<< HEAD
             return View(ticket);
         }
 
@@ -225,12 +210,6 @@ namespace TicketDeck.Controllers
             _context.Tickets.Remove(ticket);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-=======
-            _context.Tickets.Remove(ticket);
-            await _context.SaveChangesAsync();
-
-            return ticket;
->>>>>>> 924ec86732d8dc63079458f8df2bda1429b8e148
         }
 
         private bool TicketExists(int id)
