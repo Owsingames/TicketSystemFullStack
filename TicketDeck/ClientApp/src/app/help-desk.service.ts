@@ -22,10 +22,7 @@ export class HelpDeskService {
   controller: string = '';
   baseURL: string = `https://localhost:44314/api/${this.controller}`
 
-  getUser(): any {
-    this.controller='Users'
-    return this.http.get<User>(this.baseURL);
-  }
+
 
   //getTickets(): any {
   //  this.controller = 'Tickets'
