@@ -11,10 +11,7 @@ import { Injectable } from '@angular/core';
 
 
 
-export class User {
-  userID: number;
-  Name: string;
-}
+
 
 
 export class HelpDeskService {
