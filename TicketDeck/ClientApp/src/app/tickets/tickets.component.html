@@ -1,0 +1,7 @@
+<div style="border: 1px solid red">User Component</div>
+
+<h1>Tickets</h1>
+
+<div *ngFor="let t of tickets">
+  <p <button *ngIf="!ticket.completed" (click)="ResolveTicket(i)" >Resolved</button>>Id:{{t.ticketId}} Title:{{t.ticketname}}</p>
+</div>

@@ -12,6 +12,7 @@ namespace TicketDeck
 {
     public class Startup
     {
+
         string connection = "Server=.\\SQLExpress;Database=HelpDesk;Trusted_Connection=True;ConnectRetryCount=0;";
 
         public Startup(IConfiguration configuration)
@@ -27,6 +28,8 @@ namespace TicketDeck
             services.AddDbContext<HelpDeskContext>(options => options.UseSqlServer(connection));
 
             services.AddControllersWithViews();
+            services.AddDbContext<HelpDeskContext>(options => options.UseSqlServer(connection));
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
