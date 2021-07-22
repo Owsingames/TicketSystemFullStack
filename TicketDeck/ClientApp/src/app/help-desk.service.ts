@@ -4,9 +4,12 @@ import { Tickets } from './tickets/tickets';
 
 
 
+
+
 @Injectable({
   providedIn: 'root'
 })
+
 
 
 
@@ -21,14 +24,17 @@ export class HelpDeskService {
   baseURL: string = `https://localhost:44314/api/${this.controller}`
 
 
-  getTickets(): any {
-    this.controller = 'Tickets'
-    return this.http.get<Tickets>(this.baseURL);
-  }
+  //getUser(): any {
+  //  this.controller = 'Users'
+  //  return this.http.get<User>(this.baseURL);
+  //}
+
+  
   ////  //getUser(): any {
   ////  //  this.controller = 'Users'
   ////  //  return this.http.get<User>(this.baseURL);
   ////  //}
+
 
 
   ////  //getBookmarks(): any {
@@ -36,4 +42,16 @@ export class HelpDeskService {
   ////  //  return this.http.get<Bookmark>(this.baseURL);
   ////  //}
   ////}
+
+
+  getTickets(): any {
+    this.controller = 'Tickets'
+    return this.http.get<Tickets>(this.baseURL);
+  }
+
+  //getBookmarks(): any {
+  //  this.controller = 'Bookmarks'
+  //  return this.http.get<Bookmark>(this.baseURL);
+  //}
+
 }
