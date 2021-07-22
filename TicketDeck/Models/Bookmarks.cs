@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace TicketDeck.Models
 {
-    public partial class Bookmark
+    public partial class Bookmarks
     {
         public int? PersonId { get; set; }
         public int? TicketId { get; set; }
 
         public virtual User Person { get; set; }
-        public virtual Ticket Ticket { get; set; }
+        public virtual Tickets Ticket { get; set; }
     }
 }

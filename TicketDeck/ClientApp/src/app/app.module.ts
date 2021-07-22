@@ -13,6 +13,8 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
 import { TicketsComponent } from './tickets/tickets.component';
 import { UserComponent } from './user/user.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
 /*Don't forgot to import the component into app.module so we can pass it on 1 of 3*/
 
 
@@ -24,10 +26,9 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-
     TicketsComponent,
-
-    UserComponent
+    UserComponent,
+    BookmarksComponent
 
   ],
   imports: [
@@ -41,11 +42,12 @@ import { UserComponent } from './user/user.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+    { path: 'tickets', component: TicketsComponent},
+      { path: 'user', component: UserComponent },
+      {path: 'bookmarks', component: BookmarksComponent}
 
-      {path: 'tickets', component: TicketsComponent}
-
-      { path: 'user', component:UserComponent}
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
