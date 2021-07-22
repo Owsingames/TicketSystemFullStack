@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace TicketDeck.Models
 {
-    public partial class Ticket
+    public partial class Tickets
     {
         public int TicketId { get; set; }
         public string Title { get; set; }

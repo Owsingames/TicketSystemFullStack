@@ -17,8 +17,8 @@ namespace TicketDeck.Models
         {
         }
 
-        public virtual DbSet<Bookmark> Bookmarks { get; set; }
-        public virtual DbSet<Ticket> Tickets { get; set; }
+        public virtual DbSet<Bookmarks> Bookmarks { get; set; }
+        public virtual DbSet<Tickets> Tickets { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -33,7 +33,7 @@ namespace TicketDeck.Models
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
-            modelBuilder.Entity<Bookmark>(entity =>
+            modelBuilder.Entity<Bookmarks>(entity =>
             {
                 entity.HasNoKey();
 
@@ -52,7 +52,7 @@ namespace TicketDeck.Models
                     .HasConstraintName("FK__Bookmarks__Ticke__2C3393D0");
             });
 
-            modelBuilder.Entity<Ticket>(entity =>
+            modelBuilder.Entity<Tickets>(entity =>
             {
                 entity.Property(e => e.TicketId).HasColumnName("TicketID");
 

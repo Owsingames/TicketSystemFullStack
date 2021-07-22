@@ -1,9 +1,17 @@
-<div style="border: 1px solid red">User Component</div>
+<div style="border: 1px solid red">Ticket Component</div>
 
 <h1>Tickets</h1>
 
+<button (click)="createTicket()">
+  Create New Ticket
+</button>
+
+<button><a class="btn" routerLink="/bookmarks">Bookmarks</a>
+  </button>
+
+
 <div *ngFor="let t of tickets">
-  <p><button *ngIf="!ticket.completed" (click)="ResolveTicket(i)" >Resolved</button>>Id:{{t.ticketId}} Title:{{t.ticketTitle}}</p>
+  <p> Id:{{t.ticketId}} Title:{{t.title}}</p>
 </div>
 
 

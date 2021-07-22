@@ -22,14 +22,14 @@ namespace TicketDeck.Controllers
 
         // GET: api/Tickets
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Ticket>>> GetTickets()
+        public async Task<ActionResult<IEnumerable<Tickets>>> GetTickets()
         {
             return await _context.Tickets.ToListAsync();
         }
 
         // GET: api/Tickets/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Ticket>> GetTicket(int id)
+        public async Task<ActionResult<Tickets>> GetTicket(int id)
         {
             var ticket = await _context.Tickets.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace TicketDeck.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTicket(int id, Ticket ticket)
+        public async Task<IActionResult> PutTicket(int id, Tickets ticket)
         {
             if (id != ticket.TicketId)
             {
@@ -77,7 +77,7 @@ namespace TicketDeck.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Ticket>> PostTicket(Ticket ticket)
+        public async Task<ActionResult<Tickets>> PostTicket(Tickets ticket)
         {
             _context.Tickets.Add(ticket);
             await _context.SaveChangesAsync();
@@ -87,7 +87,7 @@ namespace TicketDeck.Controllers
 
         // DELETE: api/Tickets/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Ticket>> DeleteTicket(int id)
+        public async Task<ActionResult<Tickets>> DeleteTicket(int id)
         {
             var ticket = await _context.Tickets.FindAsync(id);
             if (ticket == null)
