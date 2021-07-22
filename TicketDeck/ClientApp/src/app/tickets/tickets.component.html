@@ -3,5 +3,8 @@
 <h1>Tickets</h1>
 
 <div *ngFor="let t of tickets">
-  <p <button *ngIf="!ticket.completed" (click)="ResolveTicket(i)" >Resolved</button>>Id:{{t.ticketId}} Title:{{t.ticketname}}</p>
+  <p><button *ngIf="!ticket.completed" (click)="ResolveTicket(i)" >Resolved</button>>Id:{{t.ticketId}} Title:{{t.ticketTitle}}</p>
 </div>
+
+
+

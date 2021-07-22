@@ -29,7 +29,7 @@ import { TicketsComponent } from './tickets/tickets.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      {path: 'tickets', component: TicketsComponent}
+    { path: 'tickets', component: TicketsComponent}
     ])
   ],
   providers: [],
