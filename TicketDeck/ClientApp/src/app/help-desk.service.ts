@@ -5,18 +5,13 @@ import { User } from './user/user';
 import { Bookmarks } from './bookmarks/bookmarks';
 
 
-
-
-
 @Injectable({
   providedIn: 'root'
 })
 
 
-
-
 export class HelpDeskService {
-
+ 
   constructor(private http: HttpClient) {
 
 
@@ -27,7 +22,7 @@ export class HelpDeskService {
 
 
   getUser(): any {
-    this.controller = 'User'
+    this.controller = 'Users'
     return this.http.get<User>(this.baseURL);
   }
 
@@ -37,13 +32,10 @@ export class HelpDeskService {
   ////  //  return this.http.get<User>(this.baseURL);
   ////  //}
 
-
-
   getBookmarks(): any {
     this.controller = 'Bookmarks'
     return this.http.get<Bookmarks>(this.baseURL);
   }
-
 
 
   getTickets(): any {

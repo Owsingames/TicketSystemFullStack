@@ -6,12 +6,22 @@
   Create New Ticket
 </button>
 
-<button><a class="btn" routerLink="/bookmarks">Bookmarks</a>
-  </button>
+<a class="btn" routerLink="/bookmarks">Bookmarks</a>
+
+<div>
+
+  <form>
+    <label>Search A Ticket</label>
+    <input type="text" name="ticket" />
+    <br />
+    <input type="submit" value="Search Ticket" />
+  </form>
+</div>
+
 
 
 <div *ngFor="let t of tickets">
-  <p> Id:{{t.ticketId}} Title:{{t.title}}</p>
+  <p> Id:{{t.TicketId}} Title:{{t.Title}}</p>
 </div>
 
 

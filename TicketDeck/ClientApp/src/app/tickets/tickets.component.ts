@@ -1,11 +1,12 @@
 import { Component, Inject } from '@angular/core';
 import { Tickets } from './Tickets';
 import { HelpDeskService } from '../help-desk.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tickets',
   templateUrl: './tickets.component.html',
-  providers: [HelpDeskService]
+  providers: [HttpClient]
 })
 /** Tickets component*/
 export class TicketsComponent {
@@ -16,6 +17,7 @@ export class TicketsComponent {
   constructor(private HelpDeskService: HelpDeskService) {
       
     this.tickets = [];
-    }
+  }
+
     
   }
